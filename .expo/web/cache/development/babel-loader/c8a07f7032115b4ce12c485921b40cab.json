@@ -1,0 +1,1 @@
+{"ast":null,"code":"export { default as QRCode } from \"./lib/QRCode\";","map":{"version":3,"sources":["C:/LABSREACT/lab3/AwesomeProject/node_modules/react-native-custom-qr-codes-expo/index.js"],"names":["default","QRCode"],"mappings":"AAAA,SAASA,OAAO,IAAIC,MAApB","sourcesContent":["export { default as QRCode } from './lib/QRCode';\n"]},"metadata":{},"sourceType":"module"}

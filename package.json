@@ -1,0 +1,38 @@
+{
+  "main": "node_modules/expo/AppEntry.js",
+  "scripts": {
+    "start": "expo start",
+    "android": "expo start --android",
+    "ios": "expo start --ios",
+    "web": "expo start --web",
+    "eject": "expo eject"
+  },
+  "dependencies": {
+    "@react-native-community/art": "^1.2.0",
+    "expo": "^37.0.0",
+    "expo-barcode-scanner": "^8.1.0",
+    "lodash": "4.17.15",
+    "lodash.values": "4.3.0",
+    "native-base": "2.13.8",
+    "react": "^16.9.0",
+    "react-dom": "^16.13.1",
+    "react-native": "https://github.com/expo/react-native/archive/sdk-37.0.1.tar.gz",
+    "react-native-custom-qr-codes-expo": "^2.2.0",
+    "react-native-elements": "^1.2.7",
+    "react-native-gesture-handler": "^1.3.0",
+    "react-native-qrcode-svg": "^6.0.6",
+    "react-native-reanimated": "^1.2.0",
+    "react-native-screens": "^2.7.0",
+    "react-native-sqlite-storage": "4.1.0",
+    "react-native-svg": "^12.1.0",
+    "react-native-web": "0.11.7",
+    "react-navigation": "4.0.10",
+    "react-navigation-stack": "^1.10.3",
+    "react-qr-code": "^1.0.2",
+    "uuid": "3.3.3"
+  },
+  "devDependencies": {
+    "babel-preset-expo": "7.1.0"
+  },
+  "private": true
+}
