@@ -44,7 +44,10 @@ export class ShowScreen extends Component {
                     {new Date(this.props.navigation.getParam('date')).toLocaleDateString("ru-RU")}
                 </Text>
                 <Text style={styles.text}>
-                    <Text style={styles.textBold}>{this.props.navigation.getParam('text')}</Text>
+                    <Text style={styles.textBold}>{this.props.navigation.getParam('title')}</Text>
+                </Text>
+                <Text style={styles.text}>
+                    <Text>{this.props.navigation.getParam('text')}</Text>
                 </Text>
                 {/* <Text style={styles.text}>
                     <Text style={styles.textBold}>Категория: </Text>

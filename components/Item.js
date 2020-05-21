@@ -4,7 +4,7 @@ import { Icon } from 'native-base'
 import { Button } from 'react-native-elements';
 const { width } = Dimensions.get('window')
 
-const Item = ({ dateT, textT, categoryT, id, deleteTodo, clickItem  }) => {
+const Item = ({ dateT, titleT, textT, categoryT, id, deleteTodo, clickItem  }) => {
 
     // clipboardItem = () => {
     //     Clipboard.setString(dateT + '\n' + textT + '\n' + categoryT)
@@ -36,15 +36,18 @@ const Item = ({ dateT, textT, categoryT, id, deleteTodo, clickItem  }) => {
 			<View style={styles.rowContainer} >
 				{/* <Text style={styles.text} onPress={() => clickItem({date: dateT, text: textT, category: categoryT})} onLongPress={this.clipboardItem}> */}
 
-				<Text style={styles.text} onPress={() => clickItem({ date: dateT, text: textT, category: categoryT })} >
+				<Text style={styles.text} onPress={() => clickItem({ date: dateT, title: titleT, text: textT, category: categoryT })} style={styles.title}>
 					<Button
 						style={{ marginRight: 10 }}
 						buttonStyle={categoryStyle(categoryT)}
 					/>
+					{ titleT }
+				</Text>
+				<Text onPress={() => clickItem({date: dateT, title: titleT, text: textT, category: categoryT})} style={styles.note}>
 					{textT.length > 15 ? textT.slice(0,15) + '...' : textT}
 				</Text>
-				<Text onPress={() => clickItem({date: dateT, text: textT, category: categoryT})} style={styles.dateTitle}>
-					{new Date(dateT).toLocaleDateString("ru-RU")}
+				<Text onPress={() => clickItem({date: dateT, title: titleT, text: textT, category: categoryT})} style={styles.dateTitle}>
+					{new Date(dateT).toLocaleDateString("ru-RU")} {new Date(dateT).toLocaleTimeString("ru-RU")}
 				</Text>
 			</View>
 			<TouchableOpacity onPressOut={() => deleteTodo(id)}>
@@ -71,6 +74,13 @@ const styles = StyleSheet.create({
         // paddingVertical: 20,
         // width: width / 0.2,
         height: 60,
+	},
+	title: {
+		fontSize: 14,
+		fontWeight: 500,
+	},	
+	note: {
+		fontSize: 14,
 	},
 	dateTitle: {
 		fontSize: 12

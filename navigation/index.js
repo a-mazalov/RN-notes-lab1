@@ -4,6 +4,7 @@ import { createStackNavigator } from 'react-navigation-stack';
 import HomeScreen from '../screens/HomeScreen'
 import AddScreen from '../screens/AddScreen'
 import ShowScreen from '../screens/ShowScreen'
+import AboutScreen from '../screens/AboutScreen'
 
 const StackNav = createStackNavigator(
 	{
@@ -15,6 +16,9 @@ const StackNav = createStackNavigator(
 		},
 		ShowScreen: {
 			screen: ShowScreen
+		},
+		About: {
+			screen: AboutScreen
 		},
 	}
 )

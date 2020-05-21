@@ -24,13 +24,14 @@ export class AddScreen extends Component {
 
     state = {
         date: '',
+        title: '',
         text: '',
-        category: ''
+        category: 0
     }
 
     onChangeText = event => {
-        const {date, text, category} = this.state;
-        this.setState({ date: date, text: text, category: category})
+        const {date, title, text, category} = this.state;
+        this.setState({ date: date, title: title, text: text, category: category})
     }
 
     backFunction = () => {
@@ -40,6 +41,7 @@ export class AddScreen extends Component {
     onAddTask = () => {
 		let obj = {
 			date: new Date().getTime(),
+			title: this.state.title,
 			text: this.state.text,
 			category: this.state.category
 		}
@@ -62,6 +64,17 @@ export class AddScreen extends Component {
                 <StatusBar barStyle='light-content' />
                 <View style={{ marginRight: 10, marginTop: 25 }}>
                     <Form>
+                        <Item>
+                            <Input
+                            	value={this.state.titleTest}
+                                placeholder='Заголовок'                                
+                                autoFocus
+                                clearButtonMode='always'
+                                autoCorrect={false}
+                                onChangeText={title => this.setState({title})}
+                                returnKeyType={'done'}
+                            />
+						</Item>
                         <Item>
                             <Input
                             	value={this.state.task}
